@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Dropdown Button</title>
+  <style>
+    /* Style for the button container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the button */
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    /* Dropdown menu container (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Dropdown item styling */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Hover effect for dropdown items */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown when hovering over the button */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Additional styling for nested dropdowns */
+    .nested-dropdown {
+      position: relative;
+    }
+
+    .nested-dropdown-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .nested-dropdown:hover .nested-dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Double Dropdown Button -->
+  <div class="dropdown">
+    <button class="btn">Dropdown Button</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <!-- Nested Dropdown inside the first dropdown -->
+      <div class="nested-dropdown">
+        <a href="#">Option 3 with nested</a>
+        <div class="nested-dropdown-content">
+          <a href="#">Sub-option 1</a>
+          <a href="#">Sub-option 2</a>
+        </div>
+      </div>
+      <a href="#">Option 4</a>
+    </div>
+  </div>
+
+</body>
+</html>
